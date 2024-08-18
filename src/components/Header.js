@@ -1,57 +1,76 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 
-const HeaderContainer = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #333;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+function Header() {
+  const navLinksStart = [
+    { name: "Home", href: "#", current: true },
+    { name: "Advertise", href: "#", current: false },
+    { name: "Distribute", href: "#", current: false },
+  ];
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
+  const navLinksEnd = [
+    { name: "Hall of Fame", href: "#", current: false },
+    { name: "FAQ", href: "#", current: false },
+    { name: "Contact Us", href: "#", current: false },
+  ];
 
-const Logo = styled.div`
-  font-size: 24px;
-  font-weight: bold;
-  color: #00bd24;
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 30px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-top: 20px;
-  }
-`;
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  &:hover {
-    color: #00bd24;
-  }
-`;
-
-const Header = () => {
   return (
-    <HeaderContainer>
-      <Logo>free h2o</Logo>
-      <Nav>
-        <NavLink to="/packages">Packages</NavLink>
-        <NavLink to="/product">Our Product</NavLink>
-        <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </Nav>
-    </HeaderContainer>
+    <div>
+      <nav className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 ">
+        <div className="max-w-screen-xl flex flex-wrap items-center  mx-auto p-4 justify-center">
+          <div className="flex items-center space-x-8 rtl:space-x-reverse">
+            {/* First part of the navigation links */}
+            <ul className="flex space-x-4 rtl:space-x-reverse font-normal">
+              {navLinksStart.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className={`block py-2 px-3 rounded md:p-0 ${
+                      link.current
+                        ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                    }`}
+                    aria-current={link.current ? "page" : undefined}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            {/* Logo */}
+            <a
+              href="https://flowbite.com/"
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              {/* <img src="/logo.png" className="h-8" alt="Flowbite Logo" /> */}
+              <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+                FreeH2O
+              </span>
+            </a>
+
+            {/* Second part of the navigation links */}
+            <ul className="flex space-x-4 rtl:space-x-reverse  font-normal">
+              {navLinksEnd.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className={`block py-2 px-3 rounded md:p-0 ${
+                      link.current
+                        ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                    }`}
+                    aria-current={link.current ? "page" : undefined}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   );
-};
+}
 
 export default Header;
