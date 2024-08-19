@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./sections/HeroSection";
 import FeatureSection from "./sections/FeatureSection";
-import AdvertiseSection from "./sections/AdvertiseSection";
-import DistributionSection from "./sections/DistributionSection";
+import AdvertiseSection from "./pages/AdvertiseSection";
+import DistributionSection from "./pages/DistributionSection";
+import AdCarousel from "./sections/AdCarousel";
+import InfoSection from "./sections/InfoSection";
 import PartnersSection from "./sections/PartnersSection";
 import Footer from "./components/Footer";
 
@@ -18,15 +20,17 @@ function App() {
           element={
             <>
               <HeroSection />
-              {/* <FeatureSection />
-              <AdvertiseSection />
+              <FeatureSection />
+              <AdCarousel />
+              <InfoSection />
+              {/* <AdvertiseSection />
               <DistributionSection />
               <PartnersSection /> */}
             </>
           }
         />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
