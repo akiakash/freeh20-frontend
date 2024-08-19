@@ -18,15 +18,15 @@ function App() {
           element={
             <>
               <HeroSection />
-              <FeatureSection />
+              {/* <FeatureSection />
               <AdvertiseSection />
               <DistributionSection />
-              <PartnersSection />
+              <PartnersSection /> */}
             </>
           }
         />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
