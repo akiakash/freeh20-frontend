@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./sections/HeroSection";
@@ -21,14 +21,15 @@ function App() {
             <>
               <HeroSection />
               <FeatureSection />
-              <AdCarousel />
+              {/* <AdCarousel /> */}
               <InfoSection />
-              {/* <AdvertiseSection />
-              <DistributionSection />
+              {/* <AdvertiseSection /> */}
+              {/* <DistributionSection />
               <PartnersSection /> */}
             </>
           }
         />
+        <Route path="/advertise" element={<AdvertiseSection />} />
       </Routes>
       <Footer />
     </Router>

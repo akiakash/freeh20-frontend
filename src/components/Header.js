@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
   const navLinksStart = [
-    { name: "Home", href: "#", current: true },
-    { name: "Advertise", href: "#", current: false },
+    { name: "Home", href: "/", current: true },
+    { name: "Advertise", href: "/advertise", current: false },
     { name: "Distribute", href: "#", current: false },
   ];
 
@@ -26,8 +26,8 @@ function Header() {
                     href={link.href}
                     className={`block py-2 px-3 rounded md:p-0 ${
                       link.current
-                        ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                        ? "bg-blue-700 md:bg-transparent md:text-[#54C6CD] hover:text-[#54C6CD]"
+                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:[#54C6CD] "
                     }`}
                     aria-current={link.current ? "page" : undefined}
                   >
@@ -43,7 +43,7 @@ function Header() {
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               {/* <img src="/logo.png" className="h-8" alt="Flowbite Logo" /> */}
-              <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+              <span className="self-center text-2xl font-bold whitespace-nowrap text-[#54C6CD]">
                 FreeH2O
               </span>
             </a>
