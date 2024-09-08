@@ -124,7 +124,6 @@ function QuoteForm() {
               rows="4"
             ></textarea>
           </div>
-
           <div>
             <button
               type="submit"

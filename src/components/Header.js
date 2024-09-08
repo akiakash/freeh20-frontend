@@ -80,7 +80,7 @@ function Header() {
               href="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img src={freH20Logo} className="h-8" alt="Flowbite Logo" />
+              <img src={freH20Logo} className="h-12" alt="Flowbite Logo" />
               {/* <span className="self-center text-2xl font-bold whitespace-nowrap text-[#54C6CD]">
                 FreeH2O
               </span> */}
