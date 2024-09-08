@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import Bottle from "../assets/image/black@3x@3x.png";
 import "aos/dist/aos.css"; // Import the AOS styles
 
 export default function HeroSection() {
@@ -37,7 +38,7 @@ export default function HeroSection() {
         className="flex-1 flex justify-center mb-4 md:mb-0"
         data-aos="fade-up"
       >
-        <img src="./bottle.png" className="w-3/4 md:w-full" alt="Bottle" />
+        <img src={Bottle} className="w-3/4 md:w-full" alt="Bottle" />
       </div>
     </div>
   );

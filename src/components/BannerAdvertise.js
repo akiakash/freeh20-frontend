@@ -27,7 +27,10 @@ function BannerAdvertise() {
                   className="w-[131px]"
                 />
               </div>
-              <p className="text-lg font-light mb-2 text-white max-w-[150px]">
+              <p className="text-3xl font-light text-white max-w-[150px] font-medium pb-4">
+                10 X
+              </p>
+              <p className="text-base font-light mb-2 text-[#8D8D8D] max-w-[150px] pb-4">
                 more impressions than direct mail
               </p>
             </div>
@@ -44,7 +47,10 @@ function BannerAdvertise() {
                   className="w-[131px]"
                 />
               </div>
-              <p className="text-lg font-light mb-2 text-white max-w-[150px]">
+              <p className="text-3xl font-light text-white max-w-[150px] font-medium pb-4">
+                $2.50
+              </p>
+              <p className="text-base font-light mb-2 text-[#8D8D8D] max-w-[150px] pb-4">
                 cheaper per ten impressions than direct mail
               </p>
             </div>
@@ -61,7 +67,10 @@ function BannerAdvertise() {
                   className="w-[131px]"
                 />
               </div>
-              <p className="text-lg font-light mb-2 text-white max-w-[150px]">
+              <p className="text-3xl font-light text-white max-w-[150px] font-medium pb-4">
+                30%
+              </p>
+              <p className="text-base font-light mb-2 text-[#8D8D8D] max-w-[150px] pb-4">
                 return on investment
               </p>
             </div>
@@ -77,7 +86,10 @@ function BannerAdvertise() {
                   className="w-[131px]"
                 />
               </div>
-              <p className="text-lg font-light mb-2 text-white max-w-[150px]">
+              <p className="text-3xl font-light text-white max-w-[150px] font-medium pb-4">
+                Priceless
+              </p>
+              <p className="text-base font-light mb-2 text-[#8D8D8D] max-w-[150px] pb-4">
                 saving lives and helping the planet
               </p>
             </div>
