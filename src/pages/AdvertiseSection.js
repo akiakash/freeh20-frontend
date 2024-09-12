@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import advertiseImage from "../assets/advertisment.png";
+import advertiseImage from "../assets/herosample.png";
 import BannerAdvertise from "../components/BannerAdvertise";
 import TextAnimation from "../components/textAnimation/text";
 import Contact from "../components/QuoteForm";
@@ -39,7 +39,7 @@ const AdvertiseSection = () => {
         <motion.img
           src={advertiseImage}
           alt="Advertise with FreeH2O"
-          className="w-full md:w-[500px] mt-12 md:mt-0 md:ml-12"
+          className="w-full md:w-[500px] mt-12 md:mt-0 md:ml-12 rounded-[20px]"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}

@@ -5,23 +5,23 @@ import freH20Logo from "../assets/logo/home_logo.png";
 function Header() {
   const location = useLocation();
 
-  const getBreadcrumb = () => {
-    if (location.pathname === "/") {
-      return "Home";
-    } else if (location.pathname === "/advertise") {
-      return "Home > Advertise";
-    } else if (location.pathname === "/distribute") {
-      return "Home > Distribute";
-    } else if (location.pathname === "/hall-of-fame") {
-      return "Home > Hall of Fame";
-    } else if (location.pathname === "/faq") {
-      return "Home > FAQ";
-    } else if (location.pathname === "/contact") {
-      return "Home > Contact Us";
-    } else {
-      return "Home";
-    }
-  };
+  // const getBreadcrumb = () => {
+  //   if (location.pathname === "/") {
+  //     return "Home";
+  //   } else if (location.pathname === "/advertise") {
+  //     return "Home > Advertise";
+  //   } else if (location.pathname === "/distribute") {
+  //     return "Home > Distribute";
+  //   } else if (location.pathname === "/hall-of-fame") {
+  //     return "Home > Hall of Fame";
+  //   } else if (location.pathname === "/faq") {
+  //     return "Home > FAQ";
+  //   } else if (location.pathname === "/contact") {
+  //     return "Home > Contact Us";
+  //   } else {
+  //     return "Home";
+  //   }
+  // };
 
   const navLinksStart = [
     { name: "Home", href: "/", current: location.pathname === "/" },
@@ -30,23 +30,23 @@ function Header() {
       href: "/advertise",
       current: location.pathname === "/advertise",
     },
+  ];
+
+  const navLinksEnd = [
+    // {
+    //   name: "Hall of Fame",
+    //   href: "/hall-of-fame",
+    //   current: location.pathname === "/hall-of-fame",
+    // },
+    // { name: "FAQ", href: "/faq", current: location.pathname === "/faq" },
     {
       name: "Distribute",
       href: "/distribute",
       current: location.pathname === "/distribute",
     },
-  ];
-
-  const navLinksEnd = [
-    {
-      name: "Hall of Fame",
-      href: "/hall-of-fame",
-      current: location.pathname === "/hall-of-fame",
-    },
-    { name: "FAQ", href: "/faq", current: location.pathname === "/faq" },
     {
       name: "Contact Us",
-      href: "/contact",
+      href: "/contactus",
       current: location.pathname === "/contact",
     },
   ];
@@ -108,11 +108,11 @@ function Header() {
         </div>
       </nav>
       {/* Breadcrumb/Heading */}
-      <div className="mt-20 pl-36">
+      {/* <div className="mt-20 pl-36">
         <h1 className="text-sm sm:text-l font-semibold text-gray-800 break-words">
           {getBreadcrumb()}
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 }

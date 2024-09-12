@@ -26,13 +26,11 @@ function QuoteForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-          Get a Quote
-        </h2>
+      <div className="w-full max-w-[720px] p-8 bg-white shadow-md rounded-lg">
+        <h2 className="text-2xl font-medium text-gray-800 mb-6">Get a Quote</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700">
+            <label className="block text-gray-700 font-semibold">
               First and last name: *
             </label>
             <input
@@ -45,7 +43,9 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Email: *</label>
+            <label className="block text-gray-700 font-semibold">
+              Email: *
+            </label>
             <input
               type="email"
               name="email"
@@ -56,7 +56,9 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Phone Number: *</label>
+            <label className="block text-gray-700 font-semibold">
+              Phone Number: *
+            </label>
             <input
               type="tel"
               name="phoneNumber"
@@ -67,7 +69,9 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Company name: *</label>
+            <label className="block text-gray-700 font-semibold">
+              Company name: *
+            </label>
             <input
               type="text"
               name="companyName"
@@ -78,7 +82,9 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Type of business: *</label>
+            <label className="block text-gray-700 font-semibold">
+              Type of business: *
+            </label>
             <input
               type="text"
               name="businessType"
@@ -89,7 +95,7 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">
+            <label className="block text-gray-700 font-semibold">
               What do you want to advertise?: *
             </label>
             <input
@@ -102,7 +108,7 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">
+            <label className="block text-gray-700 font-semibold">
               What is your budget?: *
             </label>
             <input
@@ -115,7 +121,9 @@ function QuoteForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Message:</label>
+            <label className="block text-gray-700 font-semibold">
+              Message:
+            </label>
             <textarea
               name="message"
               value={formData.message}
@@ -127,7 +135,7 @@ function QuoteForm() {
           <div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full bg-[#54C6CD] text-white font-bold py-2 px-4 rounded-md  focus:outline-none focus:ring focus:ring-blue-300"
             >
               Send
             </button>

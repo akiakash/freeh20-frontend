@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import Bottle from "../assets/image/black@3x@3x.png";
+import Bottle from "../assets/blackbottle.png";
 import "aos/dist/aos.css"; // Import the AOS styles
 
 export default function HeroSection() {
@@ -12,33 +12,37 @@ export default function HeroSection() {
     });
   }, []);
   return (
-    <div className="max-w-[1280px] mx-auto flex flex-col-reverse md:flex-row  p-4 h-full">
-      <div className="flex-1 flex items-center flex-col justify-center gap-4 text-center md:text-left">
+    <div className="flex justify-center px-10">
+      <div className="w-full mx-auto flex  justify-center  flex-col-reverse md:flex-row  p-4 h-full">
+        <div className="flex-1 flex items-center flex-col justify-center gap-4 text-center md:text-left ">
+          <div
+            className="text-[16px] md:text-[20px] font-light"
+            data-aos="fade-up"
+          >
+            Free H2O offers a brand new alternative to traditional advertising ,
+            featuring ad spaces through our bottle canvas with QR code
+            integration. In a world where ads are often overlooked, we provide
+            brands a unique and personalized way to engage directly with their
+            audience. We don’t just advertise – we deliver brands into
+            consumers' hands, creating an unforgettable experience with tailored
+            messages and exclusive offers. Our advertising solution helps you to
+            stand out from the cluttered digital ad space.
+          </div>
+          <div className="w-full" data-aos="fade-up">
+            <button
+              type="button"
+              className="cursor-pointer py-2.5 px-5 mb-2 text-sm font-medium  hover:bg-[#40a1b2] text-white bg-[#54C6CD] rounded-lg    border-[1px]"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
         <div
-          className="text-[16px] md:text-[20px] font-light"
+          className="flex-1 flex justify-center mb-4 md:mb-0"
           data-aos="fade-up"
         >
-          freeH2o is an innovative advertising platform that utilizes premium
-          spring water as a new type of advertising medium while prioritizing
-          philanthropy and sustainability. 10% from each beverage is donated to
-          charity to fight the global water crisis. We only need 10% of Sri
-          Lankans to choose freeH2o so we can solve the global water crisis
-          permanently.
+          <img src={Bottle} className="w-[300px] " alt="Bottle" />
         </div>
-        <div className="w-full" data-aos="fade-up">
-          <button
-            type="button"
-            className="cursor-pointer py-2.5 px-5 mb-2 text-sm font-medium  hover:bg-[#40a1b2] text-white bg-[#54C6CD] rounded-lg    border-[1px]"
-          >
-            Get Started
-          </button>
-        </div>
-      </div>
-      <div
-        className="flex-1 flex justify-center mb-4 md:mb-0"
-        data-aos="fade-up"
-      >
-        <img src={Bottle} className="w-3/4 md:w-full" alt="Bottle" />
       </div>
     </div>
   );

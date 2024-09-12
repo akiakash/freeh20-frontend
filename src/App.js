@@ -9,6 +9,9 @@ import AdCarousel from "./sections/AdCarousel";
 import InfoSection from "./sections/InfoSection";
 import PartnersSection from "./sections/PartnersSection";
 import Footer from "./components/Footer";
+import HeroAdvertise from "./pages/Advertise/Hero";
+import AdvertisePage from "./pages/AdvertisePage";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -30,6 +33,8 @@ function App() {
           }
         />
         <Route path="/advertise" element={<AdvertiseSection />} />
+        <Route path="/distribute" element={<AdvertisePage />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>
