@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import advertiseImage from "../assets/advertisment.png";
 import BannerAdvertise from "../components/BannerAdvertise";
 import TextAnimation from "../components/textAnimation/text";
+import Contact from "../components/QuoteForm";
 
 const AdvertiseSection = () => {
   return (
@@ -49,6 +50,9 @@ const AdvertiseSection = () => {
       </div>
       <div className="py-10">
         <TextAnimation />
+      </div>
+      <div className="py-10">
+        <Contact />
       </div>
     </div>
   );
