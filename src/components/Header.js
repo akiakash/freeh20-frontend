@@ -1,27 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import freH20Logo from "../assets/logo/home_logo.png";
 
 function Header() {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false); // State for toggling menu
 
-  // const getBreadcrumb = () => {
-  //   if (location.pathname === "/") {
-  //     return "Home";
-  //   } else if (location.pathname === "/advertise") {
-  //     return "Home > Advertise";
-  //   } else if (location.pathname === "/distribute") {
-  //     return "Home > Distribute";
-  //   } else if (location.pathname === "/hall-of-fame") {
-  //     return "Home > Hall of Fame";
-  //   } else if (location.pathname === "/faq") {
-  //     return "Home > FAQ";
-  //   } else if (location.pathname === "/contact") {
-  //     return "Home > Contact Us";
-  //   } else {
-  //     return "Home";
-  //   }
-  // };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen); // Toggle menu state
+  };
 
   const navLinksStart = [
     { name: "Home", href: "/", current: location.pathname === "/" },
@@ -33,12 +20,6 @@ function Header() {
   ];
 
   const navLinksEnd = [
-    // {
-    //   name: "Hall of Fame",
-    //   href: "/hall-of-fame",
-    //   current: location.pathname === "/hall-of-fame",
-    // },
-    // { name: "FAQ", href: "/faq", current: location.pathname === "/faq" },
     {
       name: "Distribute",
       href: "/distribute",
@@ -47,13 +28,14 @@ function Header() {
     {
       name: "Contact Us",
       href: "/contactus",
-      current: location.pathname === "/contact",
+      current: location.pathname === "/contactus",
     },
   ];
 
   return (
     <div>
-      <nav className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 font-montserrat">
+      {/* Desktop View */}
+      <nav className="md:block hidden bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 font-montserrat">
         <div className="max-w-screen-xl flex flex-wrap items-center  mx-auto p-4 justify-center">
           <div className="flex items-center space-x-8 rtl:space-x-reverse">
             {/* First part of the navigation links */}
@@ -64,8 +46,8 @@ function Header() {
                     href={link.href}
                     className={`block py-2 px-3 rounded md:p-0 ${
                       link.current
-                        ? "bg-blue-700 md:bg-transparent md:text-[#54C6CD] hover:text-[#54C6CD]"
-                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:[#54C6CD]"
+                        ? " md:bg-transparent text-[#54C6CD] hover:text-[#54C6CD]"
+                        : " hover:bg-gray-100 md:hover:bg-transparent md:hover:[#54C6CD]"
                     }`}
                     aria-current={link.current ? "page" : undefined}
                   >
@@ -81,9 +63,6 @@ function Header() {
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={freH20Logo} className="h-12" alt="Flowbite Logo" />
-              {/* <span className="self-center text-2xl font-bold whitespace-nowrap text-[#54C6CD]">
-                FreeH2O
-              </span> */}
             </a>
 
             {/* Second part of the navigation links */}
@@ -94,8 +73,8 @@ function Header() {
                     href={link.href}
                     className={`block py-2 px-3 rounded md:p-0 ${
                       link.current
-                        ? "bg-blue-700 md:bg-transparent md:text-[#54C6CD] hover:text-[#54C6CD]"
-                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:[#54C6CD]"
+                        ? "md:bg-transparent text-[#54C6CD] hover:text-[#54C6CD]"
+                        : " hover:bg-gray-100 md:hover:bg-transparent md:hover:[#54C6CD]"
                     }`}
                     aria-current={link.current ? "page" : undefined}
                   >
@@ -107,12 +86,97 @@ function Header() {
           </div>
         </div>
       </nav>
-      {/* Breadcrumb/Heading */}
-      {/* <div className="mt-20 pl-36">
-        <h1 className="text-sm sm:text-l font-semibold text-gray-800 break-words">
-          {getBreadcrumb()}
-        </h1>
-      </div> */}
+
+      {/* Mobile View */}
+      <nav className="md:hidden block bg-white fixed p-4 fixed w-full top-0  z-20 ">
+        <div className="flex  items-center">
+          {/* Logo */}
+          <div>
+            <a href="/" className="flex items-center space-x-3">
+              <img src={freH20Logo} className="h-12" alt="FreeH2O Logo" />
+            </a>
+          </div>
+
+          {/* Hamburger button */}
+          <div className="w-full">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-800 focus:outline-none z-50 flex justify-end w-full"
+            >
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-16 6h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`fixed top-0 bg-white left-0 w-full h-screen  transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          } z-10`}
+        >
+          <div className="p-4">
+            <a
+              href="/"
+              className="flex items-center space-x-3"
+              onClick={toggleMenu}
+            >
+              <img src={freH20Logo} className="h-12" alt="FreeH2O Logo" />
+            </a>
+          </div>
+          <div className="flex flex-col p-4 space-y-4">
+            <a
+              href="/"
+              className="text-lg font-semibold text-gray-800"
+              onClick={toggleMenu}
+            >
+              Home
+            </a>
+            <a
+              href="/advertise"
+              className="text-lg font-semibold text-gray-800"
+              onClick={toggleMenu}
+            >
+              Advertise
+            </a>
+            <a
+              href="/distribute"
+              className="text-lg font-semibold text-gray-800"
+              onClick={toggleMenu}
+            >
+              Distribute
+            </a>
+            <a
+              href="/contactus"
+              className="text-lg font-semibold text-gray-800"
+              onClick={toggleMenu}
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
