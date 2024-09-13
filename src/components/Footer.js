@@ -23,11 +23,11 @@ const Footer = () => {
               Help us spread the word and share our movement with your friends
               and family
             </p>
-            <button className="mt-4 px-6 py-2  text-white rounded-full  bg-[#54C6CD]">
+            <button className="mt-4 px-6 py-2 text-white rounded-full bg-[#54C6CD]">
               Contact Us
             </button>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="https://tiktok.com" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />
             </a>
@@ -52,31 +52,32 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-center md:text-left mb-4 md:mb-0">
-            <a href="#" className="block md:inline-block md:mr-4]">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mb-8">
+          <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+            <a href="#" className="block md:inline-block md:mr-4 mb-2 md:mb-0">
               Contact
             </a>
-            <a href="#" className="block md:inline-block md:mr-4">
+            <a href="#" className="block md:inline-block md:mr-4 mb-2 md:mb-0">
               Projects
             </a>
-            <a href="#" className="block md:inline-block md:mr-4">
+            <a href="#" className="block md:inline-block md:mr-4 mb-2 md:mb-0">
               Shop Apparel
             </a>
           </div>
-          <div className="text-center md:text-left mb-4 md:mb-0">
-            <a href="#" className="block md:inline-block md:mr-4">
+          <div className="flex flex-col md:flex-row mb-4 md:mb-0">
+            <a href="#" className="block md:inline-block md:mr-4 mb-2 md:mb-0">
               Order FreeWater Boxes
             </a>
             <a href="#" className="block md:inline-block">
               Order FreeWater Bottles
             </a>
           </div>
-          <div className="text-center">
-            <p className="text-sm">
-              &copy; 2024 Copyright FreeWater All Rights Reserved
-            </p>
-          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-sm">
+            &copy; 2024 Copyright FreeWater All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>

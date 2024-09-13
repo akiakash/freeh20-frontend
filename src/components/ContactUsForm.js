@@ -25,12 +25,14 @@ function ContactUsForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-[720px]  bg-white shadow-md rounded-lg">
-        <h2 className="text-2xl font-medium text-gray-800 mb-6">Contacts Us</h2>
+    <div className="flex justify-center items-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl p-6 sm:p-8 bg-white shadow-md rounded-lg">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-800 mb-6">
+          Contact Us
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700 font-semibold">
+            <label className="block text-gray-700 font-semibold text-sm sm:text-base">
               First and last name: *
             </label>
             <input
@@ -43,7 +45,7 @@ function ContactUsForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700 font-semibold">
+            <label className="block text-gray-700 font-semibold text-sm sm:text-base">
               Email: *
             </label>
             <input
@@ -56,7 +58,7 @@ function ContactUsForm() {
             />
           </div>
           <div>
-            <label className="block text-gray-700 font-semibold">
+            <label className="block text-gray-700 font-semibold text-sm sm:text-base">
               Phone Number: *
             </label>
             <input
@@ -70,7 +72,7 @@ function ContactUsForm() {
           </div>
 
           <div>
-            <label className="block text-gray-700 font-semibold">
+            <label className="block text-gray-700 font-semibold text-sm sm:text-base">
               Subject: *
             </label>
             <input
@@ -84,7 +86,7 @@ function ContactUsForm() {
           </div>
 
           <div>
-            <label className="block text-gray-700 font-semibold">
+            <label className="block text-gray-700 font-semibold text-sm sm:text-base">
               Message:
             </label>
             <textarea
@@ -98,7 +100,7 @@ function ContactUsForm() {
           <div>
             <button
               type="submit"
-              className="w-full bg-[#54C6CD] text-white font-bold py-2 px-4 rounded-md  focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full bg-[#54C6CD] text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300 text-sm sm:text-base"
             >
               Send
             </button>
