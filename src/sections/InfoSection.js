@@ -31,9 +31,9 @@ const InfoSection = () => {
       {sectionsData.map((section, index) => (
         <div
           key={section.id}
-          className={`flex flex-col md:flex-row ${
+          className={`flex flex-col-reverse md:flex-row ${
             index % 2 !== 0 ? "md:flex-row-reverse gap-10" : ""
-          } justify-center items-center p-6 bg-white rounded-lg mb-8 gap-10`}
+          } justify-center items-center p-6 bg-white rounded-lg md:mb-8 gap-10`}
         >
           <div className="md:w-1/2 flex flex-col justify-start items-start text-center md:text-left">
             <p className="text-[16px] md:text-[20px] font-light text-justify">
@@ -51,7 +51,7 @@ const InfoSection = () => {
             <img
               src={section.imageUrl}
               alt={section.altText}
-              className="w-full h-auto rounded-lg object-cover  max-h-[380px] "
+              className="md:w-full w-[300px] rounded-lg object-cover  h-[360px] "
             />
           </div>
         </div>

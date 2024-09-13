@@ -88,8 +88,8 @@ function Header() {
       </nav>
 
       {/* Mobile View */}
-      <nav className="md:hidden block bg-white fixed p-4 fixed w-full top-0  z-20 ">
-        <div className="flex  items-center">
+      <nav className="md:hidden block bg-white fixed p-4 fixed w-full top-0 z-50 ">
+        <div className="flex  items-center ">
           {/* Logo */}
           <div>
             <a href="/" className="flex items-center space-x-3">
@@ -101,7 +101,7 @@ function Header() {
           <div className="w-full">
             <button
               onClick={toggleMenu}
-              className="text-gray-800 focus:outline-none z-50 flex justify-end w-full"
+              className="text-gray-800 focus:outline-none  flex justify-end w-full"
             >
               <svg
                 className="w-8 h-8"
@@ -130,46 +130,52 @@ function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div
-          className={`fixed top-0 bg-white left-0 w-full h-screen  transform transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-y-0" : "-translate-y-full"
-          } z-10`}
+          className={`fixed top-0 bg-white left-0 w-full h-screen transform transition-transform duration-300 ease-in-out pb-20 ${
+            isOpen ? "translate-y-0 mt-20 " : "-translate-y-full"
+          } `}
         >
-          <div className="p-4">
+          <div className="flex flex-col p-4 space-y-4 text-center h-full items-center justify-center absolute top-0 right-0 left-0">
             <a
               href="/"
-              className="flex items-center space-x-3"
-              onClick={toggleMenu}
-            >
-              <img src={freH20Logo} className="h-12" alt="FreeH2O Logo" />
-            </a>
-          </div>
-          <div className="flex flex-col p-4 space-y-4">
-            <a
-              href="/"
-              className="text-lg font-semibold text-gray-800"
+              className={`text-[30px] font-semibold ${
+                location.pathname === "/"
+                  ? "text-[#54C6CD]" // Active color for "Home"
+                  : "text-gray-800"
+              }`}
               onClick={toggleMenu}
             >
               Home
             </a>
             <a
               href="/advertise"
-              className="text-lg font-semibold text-gray-800"
+              className={`text-[30px] font-semibold ${
+                location.pathname === "/advertise"
+                  ? "text-[#54C6CD]" // Active color for "Advertise"
+                  : "text-gray-800"
+              }`}
               onClick={toggleMenu}
             >
               Advertise
             </a>
             <a
               href="/distribute"
-              className="text-lg font-semibold text-gray-800"
+              className={`text-[30px] font-semibold ${
+                location.pathname === "/distribute"
+                  ? "text-[#54C6CD]" // Active color for "Distribute"
+                  : "text-gray-800"
+              }`}
               onClick={toggleMenu}
             >
               Distribute
             </a>
             <a
               href="/contactus"
-              className="text-lg font-semibold text-gray-800"
+              className={`text-[30px] font-semibold ${
+                location.pathname === "/contactus"
+                  ? "text-[#54C6CD]" // Active color for "Contact Us"
+                  : "text-gray-800"
+              }`}
               onClick={toggleMenu}
             >
               Contact Us

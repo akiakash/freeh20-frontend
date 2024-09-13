@@ -26,8 +26,10 @@ function QuoteForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-[720px] p-8 bg-white shadow-md rounded-lg">
-        <h2 className="text-2xl font-medium text-gray-800 mb-6">Get a Quote</h2>
+      <div className="w-full max-w-[720px] p-8 bg-white  rounded-lg">
+        <h2 className="text-2xl font-medium text-gray-800 mb-6 text-center">
+          Get a Quote
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-gray-700 font-semibold">

@@ -34,25 +34,26 @@ function ContactUs() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col-reverse md:flex-row justify-center px-4 md:px-10 lg:px-20 pb-10 items-center">
-        <div
-          className="flex-1 mt-10 md:mt-0 max-w-full"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-        >
-          <img
-            src={bottle3d}
-            alt="advertise"
-            className="w-full max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
-          />
-        </div>
-        <div
-          className="flex-1 max-w-full "
-          data-aos="fade-left"
-          data-aos-duration="1200"
-        >
-          <ContactUsForm />
+      <div className="justify-center flex w-full ">
+        <div className="flex flex-col-reverse md:flex-row justify-center  pb-10 items-center  w-[1280px] justify-between">
+          <div
+            className="flex-1 mt-10 md:mt-0 w-full"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+          >
+            <img
+              src={bottle3d}
+              alt="advertise"
+              className="md:block hidden w-full max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
+            />
+          </div>
+          <div
+            className="flex-1 w-full "
+            data-aos="fade-left"
+            data-aos-duration="1200"
+          >
+            <ContactUsForm />
+          </div>
         </div>
       </div>
     </div>

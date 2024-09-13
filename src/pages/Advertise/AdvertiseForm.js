@@ -26,7 +26,7 @@ function QuoteForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen pb-[100px]">
-      <div className="w-full max-w-[720px] p-8 bg-white shadow-md rounded-lg">
+      <div className="w-full max-w-[720px] p-8 bg-white  rounded-lg">
         <h2 className="text-2xl font-medium text-gray-800 mb-6">
           Distribute Free Water
         </h2>

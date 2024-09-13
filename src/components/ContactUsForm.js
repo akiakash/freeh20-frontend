@@ -25,8 +25,8 @@ function ContactUsForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl p-6 sm:p-8 bg-white shadow-md rounded-lg">
+    <div className="flex justify-center items-center  px-4 sm:px-6 lg:px-8 py-[50px]">
+      <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl bg-white  rounded-lg">
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-800 mb-6">
           Contact Us
         </h2>

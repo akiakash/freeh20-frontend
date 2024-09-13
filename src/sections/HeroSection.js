@@ -12,7 +12,7 @@ export default function HeroSection() {
     });
   }, []);
   return (
-    <div className="flex justify-center px-10 mt-[60px]">
+    <div className="flex justify-center px-4 mt-[60px]">
       <div className="max-w-[1280px] mx-auto flex  justify-center  flex-col-reverse md:flex-row-reverse  p-4 h-full">
         <div className="flex-1 flex items-center flex-col justify-center gap-4 text-center md:text-left ">
           <div

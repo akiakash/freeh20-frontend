@@ -4,6 +4,7 @@ import advertiseImage from "../assets/herosample.png";
 import BannerAdvertise from "../components/BannerAdvertise";
 import TextAnimation from "../components/textAnimation/text";
 import Contact from "../components/QuoteForm";
+import Packages from "../components/packages";
 
 const AdvertiseSection = () => {
   return (
@@ -14,7 +15,7 @@ const AdvertiseSection = () => {
             <h1 className="text-4xl md:text-5xl mb-5 text-[#54C6CD]">
               Advertise with FreeH2O
             </h1>
-            <p className="text-lg md:text-xl mt-5 leading-relaxed text-black font-light">
+            <p className="text-lg md:text-xl mt-5 leading-relaxed text-black font-ligh text-justify">
               Leverage the power of{" "}
               <span className="text-black font-normal">
                 premium spring water
@@ -25,7 +26,7 @@ const AdvertiseSection = () => {
               thirst but also carry your message directly to the consumer's
               hands.
             </p>
-            <p className="text-lg md:text-xl mt-5 leading-relaxed text-black font-light">
+            <p className="text-lg md:text-xl mt-5 leading-relaxed text-black font-light text-justify">
               <span className="text-[#54C6CD] font-normal">Why choose us?</span>{" "}
               It's simple. Each bottle delivers your message while donating 10%
               of the proceeds to charity, helping to fight the global water
@@ -56,9 +57,19 @@ const AdvertiseSection = () => {
       <div className="py-10">
         <TextAnimation />
       </div>
-      <div className="py-10">
-        <Contact />
+      <div>
+        <Packages />
       </div>
+      <div className="py-10  text-center">
+        <h1 className="md:text-[40px] text-[20px] font-semibold">
+          {" "}
+          Looking for Different Solution ?
+        </h1>
+        <h2 className="text-[20px] font-medium text-[#54C6CD]">
+          Customize your plan Now
+        </h2>
+      </div>
+      <Contact />
     </div>
   );
 };
