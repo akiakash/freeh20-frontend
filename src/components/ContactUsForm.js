@@ -26,7 +26,7 @@ function ContactUsForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-[720px] p-8 bg-white shadow-md rounded-lg">
+      <div className="w-full max-w-[720px]  bg-white shadow-md rounded-lg">
         <h2 className="text-2xl font-medium text-gray-800 mb-6">Contacts Us</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
