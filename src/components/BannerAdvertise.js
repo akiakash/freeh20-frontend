@@ -12,7 +12,7 @@ function BannerAdvertise() {
   }, []);
   return (
     <div className="w-full  px-10">
-      <div className="w-full mx-auto  py-4 bg-black rounded-[50px] px-20">
+      <div className="w-full mx-auto  py-4 bg-black rounded-[50px] px-20 max-w-[1280px]">
         <div className=" h-full  w-full">
           <div className="flex flex-row gap-10 justify-between">
             <div

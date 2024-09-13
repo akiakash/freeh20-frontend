@@ -23,7 +23,7 @@ const Footer = () => {
               Help us spread the word and share our movement with your friends
               and family
             </p>
-            <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+            <button className="mt-4 px-6 py-2  text-white rounded-full  bg-[#54C6CD]">
               Contact Us
             </button>
           </div>
@@ -54,7 +54,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <a href="#" className="block md:inline-block md:mr-4">
+            <a href="#" className="block md:inline-block md:mr-4]">
               Contact
             </a>
             <a href="#" className="block md:inline-block md:mr-4">

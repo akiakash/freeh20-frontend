@@ -3,26 +3,24 @@ import React from "react";
 const sectionsData = [
   {
     id: 1,
-    text: "They work exclusively with local partners who build sustainable, community-owned water projects. Their partners also facilitate comprehensive water, sanitation, and hygiene programming to protect everyone’s long-term health.",
-    buttonText: "Learn more",
+    text: "Elevate your brand’s presence with every bottle. Engage your audience with personalized messages and exclusive offers they can’t miss.",
+    buttonText: "Reach Us",
     imageUrl:
-      "https://static.wixstatic.com/media/bfcb9b_3c6cf264b29e49838779345fd1a18d20~mv2.webp/v1/fill/w_888,h_667,al_c,q_85,enc_auto/free-water-drinking-image-1.webp",
+      "https://freeh2o.s3.ap-southeast-2.amazonaws.com/IMG_8674+(1).png",
     altText: "Image of clarity",
   },
   {
     id: 2,
-    text: "Another section with different content and text. This is where you can provide more information or different content based on the array data.",
-    buttonText: "Read more",
-    imageUrl:
-      "https://static.wixstatic.com/media/1a6021_8e3bf82b1ec84d66a23106181499afc8~mv2.jpeg/v1/crop/x_333,y_3,w_1587,h_1075/fill/w_1040,h_704,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/charity-water-social-preview.jpeg",
+    text: " Create memorable connections. Our bottle canvases transform everyday moments into powerful brand experiences that stand out.",
+    buttonText: "Reach Us",
+    imageUrl: "https://freeh2o.s3.ap-southeast-2.amazonaws.com/IMG_0229.JPG",
     altText: "Another descriptive alt text",
   },
   {
     id: 3,
-    text: "They work exclusively with local partners who build sustainable, community-owned water projects. Their partners also facilitate comprehensive water, sanitation, and hygiene programming to protect everyone’s long-term health.",
-    buttonText: "Learn more",
-    imageUrl:
-      "https://static.wixstatic.com/media/bfcb9b_3c6cf264b29e49838779345fd1a18d20~mv2.webp/v1/fill/w_888,h_667,al_c,q_85,enc_auto/free-water-drinking-image-1.webp",
+    text: "Go beyond digital clutter. Showcase your brand on eco-friendly bottles that not only promote your message but also support sustainability.",
+    buttonText: "Reach Us",
+    imageUrl: "https://freeh2o.s3.ap-southeast-2.amazonaws.com/advertisee.png",
     altText: "Image of clarity",
   },
 ];
@@ -49,11 +47,11 @@ const InfoSection = () => {
             </button>
           </div>
 
-          <div className="md:w-1/2 mt-8 md:mt-0 ">
+          <div className="md:w-1/2 mt-8 md:mt-0  ">
             <img
               src={section.imageUrl}
               alt={section.altText}
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto rounded-lg object-cover  max-h-[380px] "
             />
           </div>
         </div>

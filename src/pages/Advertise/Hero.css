@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-/* * {
-  padding: 0;
-  margin: 0;
-} */
-
+/* Base styles */
 .portfolio-container {
-  background-color: #0097e6;
+  background-color: white;
   width: 100%;
   height: 100vh;
   color: white;
@@ -26,7 +22,8 @@
   width: 50%;
   position: absolute;
   height: 100%;
-  background-color: #0097e6;
+  background-color: white;
+  color: #54c6cd;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -120,5 +117,68 @@
   }
   100% {
     border-radius: 200px;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .portfolio-left,
+  .portfolio-right {
+    font-size: 6rem;
+  }
+
+  .portfolio-image {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-left,
+  .portfolio-right {
+    font-size: 4rem;
+  }
+
+  .portfolio-image {
+    width: 250px;
+  }
+
+  .portfolio-left {
+    text-align: center;
+    transform: translate(-30%, 0);
+  }
+
+  .portfolio-right {
+    text-align: center;
+    transform: translate(30%, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-left,
+  .portfolio-right {
+    font-size: 2.5rem;
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    transform: none;
+  }
+
+  .portfolio-left {
+    margin-bottom: 20px;
+    animation: none;
+  }
+
+  .portfolio-right {
+    margin-top: 20px;
+    animation: none;
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    margin: 0 auto;
   }
 }

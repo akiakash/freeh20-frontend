@@ -12,11 +12,11 @@ export default function HeroSection() {
     });
   }, []);
   return (
-    <div className="flex justify-center px-10">
-      <div className="w-full mx-auto flex  justify-center  flex-col-reverse md:flex-row  p-4 h-full">
+    <div className="flex justify-center px-10 mt-[60px]">
+      <div className="max-w-[1280px] mx-auto flex  justify-center  flex-col-reverse md:flex-row-reverse  p-4 h-full">
         <div className="flex-1 flex items-center flex-col justify-center gap-4 text-center md:text-left ">
           <div
-            className="text-[16px] md:text-[20px] font-light"
+            className="text-[16px] md:text-[20px] font-light text-justify"
             data-aos="fade-up"
           >
             Free H2O offers a brand new alternative to traditional advertising ,
@@ -28,7 +28,7 @@ export default function HeroSection() {
             messages and exclusive offers. Our advertising solution helps you to
             stand out from the cluttered digital ad space.
           </div>
-          <div className="w-full" data-aos="fade-up">
+          <div className="w-full mt-10" data-aos="fade-up">
             <button
               type="button"
               className="cursor-pointer py-2.5 px-5 mb-2 text-sm font-medium  hover:bg-[#40a1b2] text-white bg-[#54C6CD] rounded-lg    border-[1px]"
