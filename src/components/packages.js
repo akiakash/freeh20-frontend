@@ -59,9 +59,9 @@ function Packages() {
                   {pkg.description}
                 </p>
                 <div className="flex justify-center items-baseline my-8">
-                  <span className="mr-2 text-5xl font-extrabold">
+                  {/* <span className="mr-2 text-5xl font-extrabold">
                     {pkg.price}
-                  </span>
+                  </span> */}
                 </div>
 
                 <ul role="list" className="mb-8 space-y-4 text-left">

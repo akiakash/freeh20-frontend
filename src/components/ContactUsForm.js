@@ -5,10 +5,7 @@ function ContactUsForm() {
     fullName: "",
     email: "",
     phoneNumber: "",
-    companyName: "",
-    businessType: "",
     advertisement: "",
-    budget: "",
     message: "",
   });
 
@@ -21,7 +18,14 @@ function ContactUsForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const mailtoLink = `mailto:infofreeh2o@gmail.com?subject=${encodeURIComponent(
+      "Contact Form Submission"
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phoneNumber}\nSubject: ${formData.advertisement}\nMessage: ${formData.message}`
+    )}`;
+
+    window.location.href = mailtoLink; // Open the user's email client
   };
 
   return (

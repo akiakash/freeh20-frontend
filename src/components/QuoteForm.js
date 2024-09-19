@@ -21,7 +21,23 @@ function QuoteForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const {
+      fullName,
+      email,
+      phoneNumber,
+      companyName,
+      businessType,
+      advertisement,
+      budget,
+      message,
+    } = formData;
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:infofreeh2o@gmail.com?subject=New Quote Request&body=Full Name: ${fullName}%0D%0AEmail: ${email}%0D%0APhone Number: ${phoneNumber}%0D%0ACompany Name: ${companyName}%0D%0ABusiness Type: ${businessType}%0D%0AWhat you want to advertise: ${advertisement}%0D%0ABudget: ${budget}%0D%0AMessage: ${message}`;
+
+    // Redirect the user to their default email client with the pre-filled email
+    window.location.href = mailtoLink;
   };
 
   return (

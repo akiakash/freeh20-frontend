@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-function QuoteForm() {
+function DistributeWaterForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phoneNumber: "",
     companyName: "",
-    businessType: "",
-    advertisement: "",
-    budget: "",
-    message: "",
+    distributionAddress: "",
+    shippingAddress: "",
+    monthlyBeverageAmount: "",
+    reasonForDistributing: "",
   });
 
   const handleChange = (e) => {
@@ -21,19 +21,38 @@ function QuoteForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    // Generate the email body using the form data
+    const mailtoLink = `mailto:infofreeh2o@gmail.com?subject=Distribute%20Free%20Water%20Request&body=
+      Full Name: ${encodeURIComponent(formData.fullName)}%0D%0A
+      Email: ${encodeURIComponent(formData.email)}%0D%0A
+      Phone Number: ${encodeURIComponent(formData.phoneNumber)}%0D%0A
+      Company Name: ${encodeURIComponent(formData.companyName)}%0D%0A
+      Distribution Address: ${encodeURIComponent(
+        formData.distributionAddress
+      )}%0D%0A
+      Shipping Address: ${encodeURIComponent(formData.shippingAddress)}%0D%0A
+      Monthly Beverage Amount: ${encodeURIComponent(
+        formData.monthlyBeverageAmount
+      )}%0D%0A
+      Reason for Distributing FreeWater: ${encodeURIComponent(
+        formData.reasonForDistributing
+      )}%0D%0A`;
+
+    // Redirect to the mailto link to send the email
+    window.location.href = mailtoLink;
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen pb-[100px]">
-      <div className="w-full max-w-[720px] p-8 bg-white  rounded-lg">
+      <div className="w-full max-w-[720px] p-8 bg-white rounded-lg">
         <h2 className="text-2xl font-medium text-gray-800 mb-6">
           Distribute Free Water
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-gray-700 font-semibold">
-              First and last name: *
+              First and Last Name: *
             </label>
             <input
               type="text"
@@ -72,7 +91,7 @@ function QuoteForm() {
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">
-              Company name: *
+              Company Name: *
             </label>
             <input
               type="text"
@@ -85,12 +104,12 @@ function QuoteForm() {
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">
-              Distribution point address *
+              Distribution Point Address: *
             </label>
             <input
               type="text"
-              name="businessType"
-              value={formData.businessType}
+              name="distributionAddress"
+              value={formData.distributionAddress}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
@@ -98,12 +117,12 @@ function QuoteForm() {
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">
-              Shipping address if it is different than the distribution point *
+              Shipping Address (if different from the distribution point): *
             </label>
             <input
               type="text"
-              name="advertisement"
-              value={formData.advertisement}
+              name="shippingAddress"
+              value={formData.shippingAddress}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
@@ -115,8 +134,8 @@ function QuoteForm() {
             </label>
             <input
               type="text"
-              name="budget"
-              value={formData.budget}
+              name="monthlyBeverageAmount"
+              value={formData.monthlyBeverageAmount}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
@@ -127,17 +146,18 @@ function QuoteForm() {
               Why do you want to distribute FreeWater? *
             </label>
             <textarea
-              name="message"
-              value={formData.message}
+              name="reasonForDistributing"
+              value={formData.reasonForDistributing}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               rows="4"
+              required
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              className="w-full bg-[#54C6CD] text-white font-bold py-2 px-4 rounded-md  focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full bg-[#54C6CD] text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             >
               Send
             </button>
@@ -148,4 +168,4 @@ function QuoteForm() {
   );
 }
 
-export default QuoteForm;
+export default DistributeWaterForm;

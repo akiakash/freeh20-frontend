@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import freH20Logo from "../assets/logo/home_logo.png";
+import freH20Logo from "../assets/logo/bluelogo.png";
 
 function Header() {
   const location = useLocation();
