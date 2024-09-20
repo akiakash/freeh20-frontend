@@ -35,7 +35,7 @@ function BannerAdvertise() {
               </p>
             </div>
 
-            <div
+            {/* <div
               className="flex flex-col items-center text-center"
               data-aos="fade-up"
               data-aos-duration="1200"
@@ -53,7 +53,7 @@ function BannerAdvertise() {
               <p className="text-sm sm:text-base font-light mb-2 text-[#8D8D8D] max-w-[150px] pb-2 sm:pb-4">
                 cheaper per ten impressions than direct mail
               </p>
-            </div>
+            </div> */}
 
             <div
               className="flex flex-col items-center text-center"
