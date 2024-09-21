@@ -6,10 +6,6 @@ function DistributeWaterForm() {
     email: "",
     phoneNumber: "",
     companyName: "",
-    distributionAddress: "",
-    shippingAddress: "",
-    monthlyBeverageAmount: "",
-    reasonForDistributing: "",
   });
 
   const handleChange = (e) => {
@@ -27,17 +23,7 @@ function DistributeWaterForm() {
       Full Name: ${encodeURIComponent(formData.fullName)}%0D%0A
       Email: ${encodeURIComponent(formData.email)}%0D%0A
       Phone Number: ${encodeURIComponent(formData.phoneNumber)}%0D%0A
-      Company Name: ${encodeURIComponent(formData.companyName)}%0D%0A
-      Distribution Address: ${encodeURIComponent(
-        formData.distributionAddress
-      )}%0D%0A
-      Shipping Address: ${encodeURIComponent(formData.shippingAddress)}%0D%0A
-      Monthly Beverage Amount: ${encodeURIComponent(
-        formData.monthlyBeverageAmount
-      )}%0D%0A
-      Reason for Distributing FreeH2O: ${encodeURIComponent(
-        formData.reasonForDistributing
-      )}%0D%0A`;
+      Company Name: ${encodeURIComponent(formData.companyName)}%0D%0A`;
 
     // Redirect to the mailto link to send the email
     window.location.href = mailtoLink;
@@ -102,58 +88,7 @@ function DistributeWaterForm() {
               required
             />
           </div>
-          <div>
-            <label className="block text-gray-700 font-semibold">
-              Distribution Point Address: *
-            </label>
-            <input
-              type="text"
-              name="distributionAddress"
-              value={formData.distributionAddress}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-semibold">
-              Shipping Address (if different from the distribution point): *
-            </label>
-            <input
-              type="text"
-              name="shippingAddress"
-              value={formData.shippingAddress}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-semibold">
-              How many beverages do you want to distribute monthly? *
-            </label>
-            <input
-              type="text"
-              name="monthlyBeverageAmount"
-              value={formData.monthlyBeverageAmount}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-semibold">
-              Why do you want to distribute FreeH2O? *
-            </label>
-            <textarea
-              name="reasonForDistributing"
-              value={formData.reasonForDistributing}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              rows="4"
-              required
-            ></textarea>
-          </div>
+
           <div>
             <button
               type="submit"

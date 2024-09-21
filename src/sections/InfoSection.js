@@ -39,12 +39,14 @@ const InfoSection = () => {
             <p className="text-[16px] md:text-[20px] font-light text-justify">
               {section.text}
             </p>
-            <button
-              type="button"
-              className="cursor-pointer mt-4 py-2.5 px-5 mb-2 text-sm font-medium text-black border-[#54C6CD] rounded-lg border-[2px]"
-            >
-              {section.buttonText}
-            </button>
+            <a href="/contactus">
+              <button
+                type="button"
+                className="cursor-pointer mt-4 py-2.5 px-5 mb-2 text-sm font-medium text-black border-[#54C6CD] rounded-lg border-[2px]"
+              >
+                {section.buttonText}
+              </button>
+            </a>
           </div>
 
           <div className="md:w-1/2 mt-8 md:mt-0  ">

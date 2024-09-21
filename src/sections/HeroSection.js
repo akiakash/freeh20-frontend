@@ -29,12 +29,14 @@ export default function HeroSection() {
             stand out from the cluttered digital ad space.
           </div>
           <div className="w-full mt-10" data-aos="fade-up">
-            <button
-              type="button"
-              className="cursor-pointer py-2.5 px-5 mb-2 text-sm font-medium  hover:bg-[#40a1b2] text-white bg-[#54C6CD] rounded-lg    border-[1px]"
-            >
-              Get Started
-            </button>
+            <a href="/advertise">
+              <button
+                type="button"
+                className="cursor-pointer py-2.5 px-5 mb-2 text-sm font-medium  hover:bg-[#40a1b2] text-white bg-[#54C6CD] rounded-lg    border-[1px]"
+              >
+                Get Started
+              </button>
+            </a>
           </div>
         </div>
         <div

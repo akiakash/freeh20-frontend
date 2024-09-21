@@ -33,13 +33,15 @@ const AdvertiseSection = () => {
               crisis. By partnering with us, you’re not just promoting your
               brand—you’re making a difference.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="mt-8 py-3 px-6 bg-[#54C6CD] text-white rounded-md text-lg cursor-pointer hover:bg-[#54C6CD]"
-            >
-              Start Advertising Today
-            </motion.button>
+            <a href="#advertise-section">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="mt-8 py-3 px-6 bg-[#54C6CD] text-white rounded-md text-lg cursor-pointer hover:bg-[#54C6CD]"
+              >
+                Start Advertising Today
+              </motion.button>
+            </a>
           </div>
           <motion.img
             src={advertiseImage}
@@ -69,7 +71,9 @@ const AdvertiseSection = () => {
           Customize your plan Now
         </h2>
       </div>
-      <Contact />
+      <div id="advertise-section">
+        <Contact />
+      </div>
     </div>
   );
 };
