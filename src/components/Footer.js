@@ -57,17 +57,17 @@ const Footer = () => {
           </div>
           {/* <div className="flex flex-col md:flex-row mb-4 md:mb-0">
             <a href="#" className="block md:inline-block md:mr-4 mb-2 md:mb-0">
-              Order FreeWater Boxes
+              Order FreeH2O Boxes
             </a>
             <a href="#" className="block md:inline-block">
-              Order FreeWater Bottles
+              Order FreeH2O Bottles
             </a>
           </div> */}
         </div>
 
         <div className="text-center">
           <p className="text-sm">
-            &copy; 2024 Copyright FreeH2O All Rights Reserved
+            &copy; 2024 Copyright FreeH2Ofree All Rights Reserved
           </p>
         </div>
       </div>

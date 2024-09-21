@@ -35,7 +35,7 @@ function DistributeWaterForm() {
       Monthly Beverage Amount: ${encodeURIComponent(
         formData.monthlyBeverageAmount
       )}%0D%0A
-      Reason for Distributing FreeWater: ${encodeURIComponent(
+      Reason for Distributing FreeH2O: ${encodeURIComponent(
         formData.reasonForDistributing
       )}%0D%0A`;
 
@@ -47,7 +47,7 @@ function DistributeWaterForm() {
     <div className="flex justify-center items-center min-h-screen pb-[100px]">
       <div className="w-full max-w-[720px] p-8 bg-white rounded-lg">
         <h2 className="text-2xl font-medium text-gray-800 mb-6">
-          Distribute Free Water
+          Distribute Free H2O
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -143,7 +143,7 @@ function DistributeWaterForm() {
           </div>
           <div>
             <label className="block text-gray-700 font-semibold">
-              Why do you want to distribute FreeWater? *
+              Why do you want to distribute FreeH2O? *
             </label>
             <textarea
               name="reasonForDistributing"

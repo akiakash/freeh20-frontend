@@ -17,7 +17,7 @@ export default function HeroAdvertise() {
         </div>
         <div className="w-full text-center">
           <p className="sm:text-[60px] text-[50px] md:text-[80px] lg:text-8xl xl:text-9xl text-[#54c6cd] font-semibold sm:text-right text-center">
-            FREE WATER
+            FREE H2O
           </p>
         </div>
         {/* <div className="mt-4">
