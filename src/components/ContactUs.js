@@ -28,8 +28,8 @@ function ContactUs() {
               data-aos="fade-up"
               data-aos-duration="1200"
             >
-              Bring your brand to hand <br />
-              <span className="text-[#54c6cd]">Free H2O</span> today!
+              Bring your brand in every hand
+              <span className="text-[#54c6cd]">{""} today!</span>
             </h1>
           </div>
         </div>

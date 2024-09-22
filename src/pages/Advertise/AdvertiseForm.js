@@ -19,7 +19,7 @@ function DistributeWaterForm() {
     e.preventDefault();
 
     // Generate the email body using the form data
-    const mailtoLink = `mailto:infofreeh2o@gmail.com?subject=Distribute%20Free%20Water%20Request&body=
+    const mailtoLink = `mailto:infofreeh2o@gmail.com?subject=Distribute%20Free%20H2O%20Request&body=
       Full Name: ${encodeURIComponent(formData.fullName)}%0D%0A
       Email: ${encodeURIComponent(formData.email)}%0D%0A
       Phone Number: ${encodeURIComponent(formData.phoneNumber)}%0D%0A
